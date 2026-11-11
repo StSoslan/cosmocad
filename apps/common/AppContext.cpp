@@ -364,6 +364,9 @@ Result<void> AppContext::setTechnicalRequirements(document::Document& document, 
     // Текст отступает от линии рамки на 2 мм, чтобы буквы её не касались.
     const double left = geometry->titleBlock.min.x + 2.0, columnWidth = std::min(185.0, geometry->titleBlock.width()) - 2.0;
     const auto limit = static_cast<std::size_t>(columnWidth / charWidth);
+    // Каждый пункт начинается с абзацного отступа в пять знаков шрифта
+    // (ГОСТ Р 2.316-2023, п. 6.6; ГОСТ Р 2.105-2019, п. 5.1.4); остальные строки — от края колонки.
+    const std::size_t indentChars = 5;
     struct Line {
         std::string text;
         bool first;
@@ -374,7 +377,8 @@ Result<void> AppContext::setTechnicalRequirements(document::Document& document, 
         std::string word, current;
         bool first = true;
         while (words >> word) {
-            if (!current.empty() && drawing::characterCount(current) + 1 + drawing::characterCount(word) > limit) {
+            if (!current.empty() &&
+                drawing::characterCount(current) + 1 + drawing::characterCount(word) > limit - (first ? indentChars : 0)) {
                 lines.push_back({current, first});
                 first = false;
                 current.clear();
@@ -401,7 +405,7 @@ Result<void> AppContext::setTechnicalRequirements(document::Document& document, 
         text->text = lines[i].text;
         text->height = height;
         // Первая строка — наверху; продолжение пункта начинается под его текстом, а не под номером.
-        text->position = {left + (lines[i].first ? 0.0 : 2.0 * charWidth), top - pitch * static_cast<double>(i + 1) + (pitch - height) / 2.0};
+        text->position = {left + (lines[i].first ? static_cast<double>(indentChars) * charWidth : 0.0), top - pitch * static_cast<double>(i + 1) + (pitch - height) / 2.0};
         if (auto id = tx.add(std::move(text)); !id) return id.error();
     }
     tx.commit();

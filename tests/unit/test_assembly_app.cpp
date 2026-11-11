@@ -693,7 +693,10 @@ TEST_F(Demo, TechnicalRequirementsAreNumberedAboveTitleBlock) {
         EXPECT_GE(line->position.x, 20.0 - 1e-9);
         EXPECT_LE(line->position.x + static_cast<double>(drawing::characterCount(line->text)) * 3.5 * 0.62, 205.0 + 1e-6);
         EXPECT_GT(line->position.y, 60.0);
-        if (line->name == "Технические требования") ++numbered;
+        // Пункт начинается с абзацного отступа в пять знаков (ГОСТ Р 2.105-2019, п. 5.1.4), остальные строки — от края.
+        const bool first = line->name == "Технические требования";
+        EXPECT_NEAR(line->position.x, 22.0 + (first ? 5 * 3.5 * 0.62 : 0.0), 1e-9);
+        if (first) ++numbered;
         EXPECT_NE(line->text, "Технические требования");  // заголовок не пишется
     }
     EXPECT_EQ(numbered, 3);
