@@ -1,0 +1,24 @@
+{
+  "id": "example-company",
+  "name": "Пример профиля организации (на основе ЕСКД)",
+  "version": "0.1.0",
+  "extends": "eskd",
+  "comment": "Образец пользовательского профиля: наследует ЕСКД, требует дополнительное поле основной надписи, отключает одно правило и добавляет своё.",
+
+  "titleBlock": {
+    "requiredFields": ["designation", "title", "developer", "organization"]
+  },
+
+  "rulesDisable": ["ESKD-GEOM-001"],
+
+  "rulesAppend": [
+    {
+      "id": "COMPANY-LINE-001",
+      "type": "main_line_width_range",
+      "severity": "warning",
+      "message": "В организации принята толщина основной линии 0,7–1,0 мм.",
+      "reference": "Стандарт организации (пример)",
+      "params": { "min": 0.7, "max": 1.0 }
+    }
+  ]
+}

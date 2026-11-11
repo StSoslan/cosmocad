@@ -1,0 +1,217 @@
+{
+  "id": "eskd",
+  "name": "ЕСКД (ГОСТ 2.x)",
+  "version": "0.3.0",
+  "comment": "Профиль содержит только параметры и ссылки на пункты стандартов, без текстов стандартов. Покрытие стандартов описано в docs/standards/eskd-coverage.md.",
+  "sheetFormats": [
+    { "name": "A0", "width": 841, "height": 1189 },
+    { "name": "A1", "width": 594, "height": 841 },
+    { "name": "A2", "width": 420, "height": 594 },
+    { "name": "A3", "width": 297, "height": 420 },
+    { "name": "A4", "width": 210, "height": 297 }
+  ],
+  "frame": {
+    "left": 20,
+    "top": 5,
+    "right": 5,
+    "bottom": 5
+  },
+  "titleBlock": {
+    "width": 185,
+    "height": 55,
+    "requiredFields": [
+      "designation",
+      "title",
+      "developer"
+    ],
+    "comment": "Форма 1. Координаты в миллиметрах от левого нижнего угла надписи. Линия: [x1, y1, x2, y2] или [x1, y1, x2, y2, \"thin\"].",
+    "lines": [
+      [7, 30, 7, 55],
+      [17, 0, 17, 55],
+      [40, 0, 40, 55],
+      [55, 0, 55, 55],
+      [65, 0, 65, 55],
+      [0, 5, 65, 5, "thin"],
+      [0, 10, 65, 10, "thin"],
+      [0, 15, 65, 15, "thin"],
+      [0, 20, 65, 20, "thin"],
+      [0, 25, 65, 25, "thin"],
+      [0, 30, 65, 30],
+      [0, 35, 65, 35],
+      [0, 40, 65, 40, "thin"],
+      [0, 45, 65, 45, "thin"],
+      [0, 50, 65, 50, "thin"],
+      [65, 40, 185, 40],
+      [65, 15, 185, 15],
+      [135, 0, 135, 40],
+      [135, 35, 185, 35],
+      [135, 20, 185, 20],
+      [150, 20, 150, 40],
+      [167, 20, 167, 40],
+      [155, 15, 155, 20],
+      [140, 20, 140, 35, "thin"],
+      [145, 20, 145, 35, "thin"]
+    ],
+    "labels": [
+      { "x": 0.8, "y": 31.2, "text": "Изм.", "height": 2.0 },
+      { "x": 7.8, "y": 31.2, "text": "Лист", "height": 2.0 },
+      { "x": 18, "y": 31.2, "text": "№ докум.", "height": 2.0 },
+      { "x": 41, "y": 31.2, "text": "Подп.", "height": 2.0 },
+      { "x": 56, "y": 31.2, "text": "Дата", "height": 2.0 },
+      { "x": 0.8, "y": 26.2, "text": "Разраб.", "height": 2.0 },
+      { "x": 0.8, "y": 21.2, "text": "Пров.", "height": 2.0 },
+      { "x": 0.8, "y": 16.2, "text": "Т. контр.", "height": 2.0 },
+      { "x": 0.8, "y": 6.2, "text": "Н. контр.", "height": 2.0 },
+      { "x": 0.8, "y": 1.2, "text": "Утв.", "height": 2.0 },
+      { "x": 136, "y": 36.2, "text": "Лит.", "height": 2.0 },
+      { "x": 151, "y": 36.2, "text": "Масса", "height": 2.0 },
+      { "x": 168, "y": 36.2, "text": "Масштаб", "height": 2.0 },
+      { "x": 136, "y": 16.2, "text": "Лист", "height": 2.0 },
+      { "x": 156, "y": 16.2, "text": "Листов", "height": 2.0 }
+    ],
+    "fields": [
+      { "key": "designation", "title": "Обозначение", "x": 68, "y": 44.5, "height": 7 },
+      { "key": "title", "title": "Наименование", "x": 68, "y": 25, "height": 5 },
+      { "key": "material", "title": "Материал", "x": 68, "y": 5.5, "height": 3.5 },
+      { "key": "organization", "title": "Организация", "x": 137, "y": 5.5, "height": 3.5 },
+      { "key": "developer", "title": "Разработал", "x": 18, "y": 26.2, "height": 2.5 },
+      { "key": "checker", "title": "Проверил", "x": 18, "y": 21.2, "height": 2.5 },
+      { "key": "techControl", "title": "Технический контроль", "x": 18, "y": 16.2, "height": 2.5 },
+      { "key": "normControl", "title": "Нормоконтроль", "x": 18, "y": 6.2, "height": 2.5 },
+      { "key": "approver", "title": "Утвердил", "x": 18, "y": 1.2, "height": 2.5 },
+      { "key": "letter", "title": "Литера", "x": 136, "y": 25.5, "height": 3.5 },
+      { "key": "mass", "title": "Масса", "x": 151.5, "y": 25.5, "height": 3.5 },
+      { "key": "scale", "title": "Масштаб", "x": 169, "y": 25.5, "height": 3.5 },
+      { "key": "sheetNumber", "title": "Лист", "x": 146, "y": 16.2, "height": 2.5 },
+      { "key": "sheetCount", "title": "Листов", "x": 170, "y": 16.2, "height": 2.5 }
+    ]
+  },
+  "lineTypes": [
+    {
+      "id": "solid_main",
+      "name": "Сплошная толстая основная",
+      "class": "main",
+      "pattern": []
+    },
+    {
+      "id": "solid_thin",
+      "name": "Сплошная тонкая",
+      "class": "thin",
+      "pattern": []
+    },
+    {
+      "id": "dashed",
+      "name": "Штриховая",
+      "class": "thin",
+      "pattern": [5, 1.5]
+    },
+    {
+      "id": "dash_dot",
+      "name": "Штрихпунктирная тонкая",
+      "class": "thin",
+      "pattern": [15, 3, 1, 3]
+    },
+    {
+      "id": "dash_dot_dot",
+      "name": "Штрихпунктирная с двумя точками тонкая",
+      "class": "thin",
+      "pattern": [15, 3, 1, 3, 1, 3]
+    }
+  ],
+  "textHeights": [2.5, 3.5, 5, 7, 10, 14, 20, 28, 40],
+  "rules": [
+    {
+      "id": "ESKD-SHEET-001",
+      "type": "sheet_present",
+      "severity": "error",
+      "message": "В чертеже должен быть ровно один лист.",
+      "reference": "ГОСТ 2.301-68"
+    },
+    {
+      "id": "ESKD-SHEET-002",
+      "type": "sheet_format_known",
+      "severity": "error",
+      "message": "Формат листа не входит в перечень основных форматов.",
+      "reference": "ГОСТ 2.301-68"
+    },
+    {
+      "id": "ESKD-SHEET-003",
+      "type": "inside_frame",
+      "severity": "error",
+      "message": "Элемент выходит за рамку листа.",
+      "reference": "ГОСТ 2.104-2006"
+    },
+    {
+      "id": "ESKD-TITLE-001",
+      "type": "title_block_required",
+      "severity": "warning",
+      "message": "Не заполнено обязательное поле основной надписи.",
+      "reference": "ГОСТ 2.104-2006"
+    },
+    {
+      "id": "ESKD-LINE-001",
+      "type": "main_line_width_range",
+      "severity": "error",
+      "message": "Толщина основной линии вне допустимых пределов.",
+      "reference": "ГОСТ 2.303-68, п. 5",
+      "params": {
+        "min": 0.5,
+        "max": 1.4
+      }
+    },
+    {
+      "id": "ESKD-LINE-002",
+      "type": "line_width_by_class",
+      "severity": "warning",
+      "message": "Толщина линии не соответствует её типу.",
+      "reference": "ГОСТ 2.303-68, таблица 1",
+      "params": {
+        "thinRatioMin": 0.3333,
+        "thinRatioMax": 0.5,
+        "ownWidthTypes": ["Roughness"]
+      }
+    },
+    {
+      "id": "ESKD-LINE-003",
+      "type": "known_line_type",
+      "severity": "error",
+      "message": "Тип линии не предусмотрен профилем.",
+      "reference": "ГОСТ 2.303-68, таблица 1"
+    },
+    {
+      "id": "ESKD-TEXT-001",
+      "type": "text_height_allowed",
+      "severity": "warning",
+      "message": "Размер шрифта не входит в стандартный ряд.",
+      "reference": "ГОСТ 2.304-81"
+    },
+    {
+      "id": "ESKD-HATCH-001",
+      "type": "hatch_spacing_range",
+      "severity": "warning",
+      "message": "Расстояние между линиями штриховки вне допустимых пределов.",
+      "reference": "ГОСТ 2.306-68",
+      "params": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    {
+      "id": "ESKD-HATCH-002",
+      "type": "hatch_angle_allowed",
+      "severity": "warning",
+      "message": "Недопустимый наклон линий штриховки.",
+      "reference": "ГОСТ 2.306-68",
+      "params": {
+        "degrees": [45, 30, 60]
+      }
+    },
+    {
+      "id": "ESKD-GEOM-001",
+      "type": "degenerate_geometry",
+      "severity": "warning",
+      "message": "Элемент нулевого размера.",
+      "reference": ""
+    }
+  ]
+}

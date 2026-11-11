@@ -1,0 +1,94 @@
+# Сборка установщика CosmoCad для Windows.
+# Результат — файл CosmoCad-<версия>-setup.exe в разделе Artifacts на странице запуска.
+name: Установщик для Windows
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  installer:
+    runs-on: windows-2022
+    env:
+      VCPKG_DEFAULT_TRIPLET: x64-windows
+      VCPKG_BINARY_SOURCES: "clear;files,${{ github.workspace }}\\vcpkg-cache,readwrite"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Версия программы
+        shell: pwsh
+        run: |
+          $text = Get-Content core/core/include/cosmocad/core/Version.h -Raw
+          if ($text -notmatch 'kAppVersion\s*=\s*"([0-9.]+)"') { throw "Не нашлась версия в Version.h" }
+          "APP_VERSION=$($Matches[1])" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+      - name: Установить Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.5.3'
+          cache: true
+
+      - name: Сохранённые библиотеки
+        uses: actions/cache@v4
+        with:
+          path: vcpkg-cache
+          key: vcpkg-x64-windows-occt-v1
+
+      - name: Установить библиотеки (первый раз — около часа)
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force vcpkg-cache | Out-Null
+          vcpkg install nlohmann-json gtest opencascade --triplet x64-windows
+
+      - name: Настроить
+        shell: pwsh
+        run: cmake --preset release -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+
+      - name: Собрать
+        run: cmake --build --preset release
+
+      - name: Тесты
+        run: ctest --preset release
+        env:
+          QT_QPA_PLATFORM: offscreen
+
+      - name: Сложить программу в папку stage
+        shell: pwsh
+        run: |
+          cmake --install build/release --prefix stage
+          # Библиотеки Qt и его модули (окна, печать)
+          windeployqt --release --no-translations --no-system-d3d-compiler --no-opengl-sw stage/bin/cosmocad.exe
+          # Остальные библиотеки (OpenCASCADE и то, от чего она зависит) лежат рядом с собранными программами
+          Get-ChildItem build/release -Recurse -Filter *.dll |
+            Where-Object { $_.FullName -notmatch '\\plugins\\' -and $_.FullName -notmatch '\\tests\\' } |
+            ForEach-Object { if (-not (Test-Path "stage/bin/$($_.Name)")) { Copy-Item $_.FullName stage/bin/ } }
+          # Библиотеки Microsoft Visual C++
+          Get-ChildItem "$env:VCToolsRedistDir\x64\Microsoft.VC*.CRT\*.dll" | Copy-Item -Destination stage/bin/
+          Copy-Item LICENSE stage/LICENSE.txt
+          Copy-Item README.md stage/README.md
+          New-Item -ItemType Directory -Force stage/docs | Out-Null
+          Copy-Item docs/user_manual/quick-start.md, docs/pipes.md, docs/scripting.md, docs/plugins.md stage/docs/
+
+      - name: Проверить, что сложенная программа запускается
+        shell: pwsh
+        run: |
+          $env:PATH = "C:\Windows\System32;C:\Windows"
+          $env:COSMOCAD_USER_DIR = "$env:RUNNER_TEMP\cosmocad-user"
+          & stage/bin/cosmocad-cli.exe pipe PP-R 1 25 6 0.6
+          if ($LASTEXITCODE -ne 0) { throw "cosmocad-cli не запустился из папки stage" }
+          & stage/bin/cosmocad-cli.exe plugins
+          if ($LASTEXITCODE -ne 0) { throw "дополнения не загрузились из папки stage" }
+
+      - name: Собрать установщик
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force out | Out-Null
+          iscc "/DAppVersion=$env:APP_VERSION" "/DStageDir=$env:GITHUB_WORKSPACE\stage" "/DOutputDir=$env:GITHUB_WORKSPACE\out" packaging/windows/cosmocad.iss
+
+      - name: Выложить установщик
+        uses: actions/upload-artifact@v4
+        with:
+          name: CosmoCad-setup
+          path: out/CosmoCad-*-setup.exe
+          if-no-files-found: error

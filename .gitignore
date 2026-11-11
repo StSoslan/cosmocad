@@ -1,0 +1,6 @@
+build/
+*.cosmocad.autosave/
+*.tmp-*/
+*.bak-*/
+__pycache__/
+CMakeUserPresets.json

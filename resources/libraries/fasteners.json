@@ -1,0 +1,492 @@
+{
+ "id": "fasteners",
+ "name": "Крепёж",
+ "version": "0.1.0",
+ "source": "Болты и гайки — текст стандартов из библиотеки files.stroyinf.ru (зеркало meganorm.ru), прочитан 10.11.2026. Шайбы — ГОСТ 11371-78 с изменениями 1–3, сверено по файлу стандарта",
+ "units": "мм",
+ "bolts": {
+  "standard": "ГОСТ 7798-70",
+  "title": "Болты с шестигранной головкой класса точности В",
+  "designation": "Болт М{d}×{l} ГОСТ 7798-70",
+  "lengths": [
+   8,
+   10,
+   12,
+   14,
+   16,
+   18,
+   20,
+   22,
+   25,
+   28,
+   30,
+   32,
+   35,
+   38,
+   40,
+   45,
+   50,
+   55,
+   60,
+   65,
+   70,
+   75,
+   80,
+   85,
+   90,
+   95,
+   100,
+   105,
+   110,
+   115,
+   120,
+   125,
+   130,
+   140,
+   150,
+   160,
+   170,
+   180,
+   190,
+   200
+  ],
+  "lengthsNotRecommended": [
+   18,
+   22,
+   28,
+   32,
+   38,
+   85,
+   95,
+   105,
+   115,
+   125
+  ],
+  "notes": [
+   "Шаг резьбы — крупный, сопоставлен с диаметрами по ряду значений таблицы 1.",
+   "Длина резьбы: до fullThreadUpTo включительно резьба на всей длине стержня; далее threadTo125 при длине до 125 и threadTo200 при длине 130–200.",
+   "Длины свыше 200 мм в библиотеку не включены: длина резьбы для них не прочитана."
+  ],
+  "items": [
+   {
+    "d": 6,
+    "pitch": 1,
+    "S": 10,
+    "k": 4.0,
+    "e": 10.9,
+    "lengthMin": 8,
+    "fullThreadUpTo": 20,
+    "threadTo125": 18,
+    "threadTo200": null,
+    "lengthMax": 90,
+    "notRecommended": false
+   },
+   {
+    "d": 8,
+    "pitch": 1.25,
+    "S": 13,
+    "k": 5.3,
+    "e": 14.2,
+    "lengthMin": 8,
+    "fullThreadUpTo": 25,
+    "threadTo125": 22,
+    "threadTo200": null,
+    "lengthMax": 100,
+    "notRecommended": false
+   },
+   {
+    "d": 10,
+    "pitch": 1.5,
+    "S": 16,
+    "k": 6.4,
+    "e": 17.6,
+    "lengthMin": 10,
+    "fullThreadUpTo": 30,
+    "threadTo125": 26,
+    "threadTo200": 32,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 12,
+    "pitch": 1.75,
+    "S": 18,
+    "k": 7.5,
+    "e": 19.9,
+    "lengthMin": 14,
+    "fullThreadUpTo": 32,
+    "threadTo125": 30,
+    "threadTo200": 36,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 14,
+    "pitch": 2,
+    "S": 21,
+    "k": 8.8,
+    "e": 22.8,
+    "lengthMin": 16,
+    "fullThreadUpTo": 38,
+    "threadTo125": 34,
+    "threadTo200": 40,
+    "lengthMax": 200,
+    "notRecommended": true
+   },
+   {
+    "d": 16,
+    "pitch": 2,
+    "S": 24,
+    "k": 10.0,
+    "e": 26.2,
+    "lengthMin": 18,
+    "fullThreadUpTo": 40,
+    "threadTo125": 38,
+    "threadTo200": 44,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 18,
+    "pitch": 2.5,
+    "S": 27,
+    "k": 12.0,
+    "e": 29.6,
+    "lengthMin": 20,
+    "fullThreadUpTo": 45,
+    "threadTo125": 42,
+    "threadTo200": 48,
+    "lengthMax": 200,
+    "notRecommended": true
+   },
+   {
+    "d": 20,
+    "pitch": 2.5,
+    "S": 30,
+    "k": 12.5,
+    "e": 33.0,
+    "lengthMin": 25,
+    "fullThreadUpTo": 50,
+    "threadTo125": 46,
+    "threadTo200": 52,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 22,
+    "pitch": 2.5,
+    "S": 34,
+    "k": 14.0,
+    "e": 37.3,
+    "lengthMin": 28,
+    "fullThreadUpTo": 55,
+    "threadTo125": 50,
+    "threadTo200": 56,
+    "lengthMax": 200,
+    "notRecommended": true
+   },
+   {
+    "d": 24,
+    "pitch": 3,
+    "S": 36,
+    "k": 15.0,
+    "e": 39.6,
+    "lengthMin": 32,
+    "fullThreadUpTo": 60,
+    "threadTo125": 54,
+    "threadTo200": 60,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 27,
+    "pitch": 3,
+    "S": 41,
+    "k": 17.0,
+    "e": 45.2,
+    "lengthMin": 35,
+    "fullThreadUpTo": 65,
+    "threadTo125": 60,
+    "threadTo200": 66,
+    "lengthMax": 200,
+    "notRecommended": true
+   },
+   {
+    "d": 30,
+    "pitch": 3.5,
+    "S": 46,
+    "k": 18.7,
+    "e": 50.9,
+    "lengthMin": 40,
+    "fullThreadUpTo": 70,
+    "threadTo125": 66,
+    "threadTo200": 72,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 36,
+    "pitch": 4,
+    "S": 55,
+    "k": 22.5,
+    "e": 60.8,
+    "lengthMin": 50,
+    "fullThreadUpTo": 85,
+    "threadTo125": 78,
+    "threadTo200": 84,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 42,
+    "pitch": 4.5,
+    "S": 65,
+    "k": 26.0,
+    "e": 71.3,
+    "lengthMin": 55,
+    "fullThreadUpTo": 100,
+    "threadTo125": 90,
+    "threadTo200": 96,
+    "lengthMax": 200,
+    "notRecommended": false
+   },
+   {
+    "d": 48,
+    "pitch": 5,
+    "S": 75,
+    "k": 30.0,
+    "e": 82.6,
+    "lengthMin": 70,
+    "fullThreadUpTo": 110,
+    "threadTo125": 102,
+    "threadTo200": 108,
+    "lengthMax": 200,
+    "notRecommended": false
+   }
+  ]
+ },
+ "nuts": {
+  "standard": "ГОСТ 5915-70",
+  "title": "Гайки шестигранные класса точности В",
+  "designation": "Гайка М{d} ГОСТ 5915-70",
+  "items": [
+   {
+    "d": 6,
+    "S": 10,
+    "m": 5.2,
+    "e": 10.9,
+    "notRecommended": false
+   },
+   {
+    "d": 8,
+    "S": 13,
+    "m": 6.8,
+    "e": 14.2,
+    "notRecommended": false
+   },
+   {
+    "d": 10,
+    "S": 16,
+    "m": 8.4,
+    "e": 17.6,
+    "notRecommended": false
+   },
+   {
+    "d": 12,
+    "S": 18,
+    "m": 10.8,
+    "e": 19.9,
+    "notRecommended": false
+   },
+   {
+    "d": 14,
+    "S": 21,
+    "m": 12.8,
+    "e": 22.8,
+    "notRecommended": true
+   },
+   {
+    "d": 16,
+    "S": 24,
+    "m": 14.8,
+    "e": 26.2,
+    "notRecommended": false
+   },
+   {
+    "d": 18,
+    "S": 27,
+    "m": 16.4,
+    "e": 29.6,
+    "notRecommended": true
+   },
+   {
+    "d": 20,
+    "S": 30,
+    "m": 18,
+    "e": 33.0,
+    "notRecommended": false
+   },
+   {
+    "d": 22,
+    "S": 34,
+    "m": 19.8,
+    "e": 37.3,
+    "notRecommended": true
+   },
+   {
+    "d": 24,
+    "S": 36,
+    "m": 21.5,
+    "e": 39.6,
+    "notRecommended": false
+   },
+   {
+    "d": 27,
+    "S": 41,
+    "m": 23.6,
+    "e": 45.2,
+    "notRecommended": true
+   },
+   {
+    "d": 30,
+    "S": 46,
+    "m": 25.6,
+    "e": 50.9,
+    "notRecommended": false
+   },
+   {
+    "d": 36,
+    "S": 55,
+    "m": 31,
+    "e": 60.8,
+    "notRecommended": false
+   },
+   {
+    "d": 42,
+    "S": 65,
+    "m": 34,
+    "e": 71.3,
+    "notRecommended": false
+   },
+   {
+    "d": 48,
+    "S": 75,
+    "m": 38,
+    "e": 82.6,
+    "notRecommended": false
+   }
+  ]
+ },
+ "washers": {
+  "standard": "ГОСТ 11371-78",
+  "title": "Шайбы. Исполнение 1, класс точности А",
+  "designation": "Шайба {d} ГОСТ 11371-78",
+  "notes": [
+   "Размеры — таблица ГОСТ 11371-78 (с изменениями 1–3), класс точности А. Толщины М6–М42 дополнительно проверены по справочной таблице масс стандарта: расчётная масса сходится с табличной до 0,05 %."
+  ],
+  "items": [
+   {
+    "d": 6,
+    "d1": 6.4,
+    "d2": 12,
+    "s": 1.6
+   },
+   {
+    "d": 8,
+    "d1": 8.4,
+    "d2": 16,
+    "s": 1.6
+   },
+   {
+    "d": 10,
+    "d1": 10.5,
+    "d2": 20,
+    "s": 2.0
+   },
+   {
+    "d": 12,
+    "d1": 13,
+    "d2": 24,
+    "s": 2.5
+   },
+   {
+    "d": 14,
+    "d1": 15,
+    "d2": 28,
+    "s": 2.5
+   },
+   {
+    "d": 16,
+    "d1": 17,
+    "d2": 30,
+    "s": 3.0
+   },
+   {
+    "d": 18,
+    "d1": 19,
+    "d2": 34,
+    "s": 3.0
+   },
+   {
+    "d": 20,
+    "d1": 21,
+    "d2": 37,
+    "s": 3.0
+   },
+   {
+    "d": 22,
+    "d1": 23,
+    "d2": 39,
+    "s": 3.0
+   },
+   {
+    "d": 24,
+    "d1": 25,
+    "d2": 44,
+    "s": 4.0
+   },
+   {
+    "d": 27,
+    "d1": 28,
+    "d2": 50,
+    "s": 4.0
+   },
+   {
+    "d": 30,
+    "d1": 31,
+    "d2": 56,
+    "s": 4.0
+   },
+   {
+    "d": 33,
+    "d1": 34,
+    "d2": 60,
+    "s": 5.0
+   },
+   {
+    "d": 36,
+    "d1": 37,
+    "d2": 66,
+    "s": 5.0
+   },
+   {
+    "d": 39,
+    "d1": 40,
+    "d2": 72,
+    "s": 6.0
+   },
+   {
+    "d": 42,
+    "d1": 43,
+    "d2": 78,
+    "s": 7.0
+   },
+   {
+    "d": 48,
+    "d1": 50,
+    "d2": 92,
+    "s": 8.0
+   }
+  ]
+ }
+}

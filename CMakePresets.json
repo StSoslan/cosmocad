@@ -1,0 +1,46 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "debug",
+      "displayName": "Отладочная сборка",
+      "inherits": "base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "release",
+      "displayName": "Выпускная сборка",
+      "inherits": "base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "RelWithDebInfo" }
+    },
+    {
+      "name": "ci",
+      "displayName": "Сборка для автоматической проверки",
+      "inherits": "release",
+      "cacheVariables": { "COSMOCAD_WARNINGS_AS_ERRORS": "ON" }
+    },
+    {
+      "name": "no-ui",
+      "displayName": "Без оконного приложения (Qt не нужен)",
+      "inherits": "release",
+      "cacheVariables": { "COSMOCAD_BUILD_UI": "OFF" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "debug", "configurePreset": "debug" },
+    { "name": "release", "configurePreset": "release" },
+    { "name": "ci", "configurePreset": "ci" },
+    { "name": "no-ui", "configurePreset": "no-ui" }
+  ],
+  "testPresets": [
+    { "name": "ci", "configurePreset": "ci", "output": { "outputOnFailure": true } },
+    { "name": "release", "configurePreset": "release", "output": { "outputOnFailure": true } }
+  ]
+}

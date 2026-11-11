@@ -1,0 +1,8 @@
+{
+  "id": "mass-report",
+  "name": "Ведомость масс",
+  "version": "1.0.0",
+  "description": "Пример дополнения: таблица объёмов и масс всех деталей проекта.",
+  "apiVersion": 1,
+  "library": "cosmocad_plugin_mass_report"
+}
