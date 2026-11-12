@@ -1,6 +1,13 @@
 // Формулы, параметрическая модель детали и её перестроение (требования 3D-1…3D-11).
 #include <gtest/gtest.h>
 
+#include <atomic>
+#include <cstddef>
+#include <memory>
+#include <optional>
+#include <string>
+#include <string_view>
+#include <vector>
 #include <algorithm>
 #include <numbers>
 

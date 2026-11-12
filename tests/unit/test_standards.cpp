@@ -1,6 +1,10 @@
 // Тесты системы стандартов (требования ОБ-7, СТ-1, СТ-3, СТ-4, СТ-5, СТ-6, ЧЕР-1).
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <memory>
+#include <string>
+#include <vector>
 #include <algorithm>
 #include <filesystem>
 #include <numbers>

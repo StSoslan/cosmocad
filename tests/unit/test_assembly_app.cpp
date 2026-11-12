@@ -1,6 +1,12 @@
 // Сборки, виды чертежа по модели и сквозной пример «деталь → сборка → чертёж → файл».
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <cstdlib>
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 #include <cmath>
 #include <set>
 #include <filesystem>

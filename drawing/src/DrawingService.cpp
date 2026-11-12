@@ -1,5 +1,11 @@
 #include "cosmocad/drawing/IDrawingService.h"
 
+#include <cstdlib>
+#include <map>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <cmath>
 
 #include "cosmocad/document/Transaction.h"

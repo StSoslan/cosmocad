@@ -1,5 +1,9 @@
 #include "Batch.h"
 
+#include <array>
+#include <cstddef>
+#include <string>
+#include <utility>
 #include <map>
 
 #include "cosmocad/modeling/Expression.h"

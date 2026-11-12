@@ -1,6 +1,12 @@
 // Тесты обмена и хранилища (требования 2D-9, ОБМ-2, ФМТ-1…ФМТ-4, ПЛ-10, КАЧ-5).
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <map>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <chrono>
 #include <filesystem>
 #include <fstream>

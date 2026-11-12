@@ -1,6 +1,12 @@
 // Ограничения эскиза и решатель (требования ЭС-1, ЭС-3, ЭС-4, ЭС-5).
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <cstdio>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <chrono>
 #include <cmath>
 #include <numbers>

@@ -1,5 +1,10 @@
 #include "cosmocad/libraries/Profiles.h"
 
+#include <cstdlib>
+#include <filesystem>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <fstream>

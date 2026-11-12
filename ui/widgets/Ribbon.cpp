@@ -11,6 +11,8 @@
 #include <QTabBar>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <functional>
 #include <map>

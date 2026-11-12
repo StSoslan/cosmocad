@@ -1,5 +1,11 @@
 #include "Plugins.h"
 
+#include <exception>
+#include <filesystem>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <fstream>
 

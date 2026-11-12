@@ -1,5 +1,13 @@
 #include "cosmocad/assembly/AssemblyService.h"
 
+#include <array>
+#include <atomic>
+#include <cstddef>
+#include <cstdlib>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <map>

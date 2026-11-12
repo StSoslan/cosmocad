@@ -1,5 +1,10 @@
 #include "cosmocad/geometry/Geometry2D.h"
 
+#include <cmath>
+#include <cstddef>
+#include <cstdlib>
+#include <optional>
+#include <vector>
 #include <algorithm>
 #include <numbers>
 

@@ -1,5 +1,11 @@
 #include "cosmocad/standards/Engine.h"
 
+#include <cstdio>
+#include <cstdlib>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <functional>

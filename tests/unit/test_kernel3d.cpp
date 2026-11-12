@@ -1,6 +1,11 @@
 // Геометрическое ядро (адаптер OCCT) и устойчивые имена граней (требование 3D-11).
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <cstdint>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cstdio>
 #include <filesystem>

@@ -1,5 +1,9 @@
 #include "cosmocad/graphics/Render3D.h"
 
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <limits>

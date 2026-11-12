@@ -1,5 +1,10 @@
 #include "cosmocad/drawing/Entities.h"
 
+#include <cstddef>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <numbers>

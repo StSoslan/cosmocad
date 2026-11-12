@@ -1,4 +1,11 @@
 // 3D-часть общей «сборки» модулей: связь деталей, сборок и чертежей между собой.
+#include <cstddef>
+#include <cstdlib>
+#include <filesystem>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <fstream>

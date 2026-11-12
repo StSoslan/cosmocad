@@ -29,6 +29,14 @@
 #include <QToolButton>
 #include <QEvent>
 #include <QMenu>
+#include <algorithm>
+#include <cstddef>
+#include <cstdlib>
+#include <filesystem>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 #include <cmath>
 #include <QVBoxLayout>
 #include <fstream>

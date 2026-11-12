@@ -1,3 +1,8 @@
+#include <cstddef>
+#include <cstdint>
+#include <string>
+#include <string_view>
+#include <utility>
 #include <cstdio>
 #include <iostream>
 #include <random>

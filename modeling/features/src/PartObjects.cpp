@@ -1,3 +1,10 @@
+#include <array>
+#include <cstdint>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
 #include "cosmocad/modeling/PartObjects.h"
 
 #include <nlohmann/json.hpp>

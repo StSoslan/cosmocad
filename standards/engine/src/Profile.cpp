@@ -1,5 +1,9 @@
 #include "cosmocad/standards/Profile.h"
 
+#include <filesystem>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <fstream>
 #include <set>

@@ -1,4 +1,10 @@
 // Виды чертежа по 3D-модели: линии проекции превращаются в обычные элементы чертежа.
+#include <cstddef>
+#include <cstdlib>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <cstdint>

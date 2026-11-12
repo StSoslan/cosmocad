@@ -1,5 +1,11 @@
 #include "cosmocad/modeling/Expression.h"
 
+#include <cctype>
+#include <cstddef>
+#include <optional>
+#include <string>
+#include <string_view>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <cstdio>

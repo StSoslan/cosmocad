@@ -1,5 +1,13 @@
 #include "cosmocad/schematic/Schematic.h"
 
+#include <cctype>
+#include <cstddef>
+#include <cstdlib>
+#include <filesystem>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <fstream>

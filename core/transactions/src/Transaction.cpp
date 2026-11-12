@@ -1,3 +1,8 @@
+#include <functional>
+#include <memory>
+#include <string>
+#include <utility>
+
 #include "cosmocad/document/Transaction.h"
 
 namespace cosmocad::document {

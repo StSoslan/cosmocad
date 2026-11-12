@@ -7,6 +7,15 @@
 #include <QDialogButtonBox>
 #include <QFormLayout>
 #include <QLineEdit>
+#include <algorithm>
+#include <array>
+#include <cstddef>
+#include <filesystem>
+#include <functional>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
 #include <cmath>
 #include <QDockWidget>
 #include <QFileDialog>

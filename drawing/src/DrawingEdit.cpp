@@ -1,4 +1,10 @@
 // Размеры радиуса и угла, штриховка, обрезка, скругление и фаска.
+#include <cstddef>
+#include <cstdlib>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <cctype>
 #include <algorithm>
 #include <cmath>

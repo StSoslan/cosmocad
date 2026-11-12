@@ -1,5 +1,11 @@
 #include "cosmocad/storage/ProjectStorage.h"
 
+#include <cstdint>
+#include <filesystem>
+#include <map>
+#include <memory>
+#include <string>
+#include <utility>
 #include <array>
 #include <fstream>
 #include <sstream>

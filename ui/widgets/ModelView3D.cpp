@@ -3,6 +3,12 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <QWheelEvent>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <optional>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 

@@ -1,5 +1,7 @@
 // Замер на эталонной нагрузке из требования КАЧ-6: чертёж из 100 000 объектов.
 // Не входит в набор тестов; запускается вручную: build/release/tests/cosmocad_bench
+#include <memory>
+#include <utility>
 #include <chrono>
 #include <filesystem>
 #include <iostream>

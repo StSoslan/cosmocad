@@ -4,6 +4,9 @@
 #define NOMINMAX
 #include <windows.h>
 #endif
+#include <cstddef>
+#include <exception>
+#include <utility>
 #include <algorithm>
 #include <optional>
 #include <filesystem>

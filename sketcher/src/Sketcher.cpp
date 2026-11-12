@@ -1,5 +1,11 @@
 #include "cosmocad/sketcher/Sketcher.h"
 
+#include <cstddef>
+#include <cstdlib>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <map>

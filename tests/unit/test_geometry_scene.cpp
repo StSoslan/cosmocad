@@ -1,5 +1,13 @@
 // Тесты геометрии, сцены, выбора и привязок (требования 2D-3, ПЛ-3, ПЛ-4).
 #include <gtest/gtest.h>
+#include <algorithm>
+#include <cmath>
+#include <cstddef>
+#include <cstdlib>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
 #include <numbers>
 
 #include "cosmocad/document/Transaction.h"

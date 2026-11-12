@@ -1,5 +1,11 @@
 #include "cosmocad/graphics/Scene.h"
 
+#include <cstddef>
+#include <cstdlib>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <cstdio>

@@ -8,6 +8,8 @@
 #include <QLineEdit>
 #include <QTimer>
 #include <QVBoxLayout>
+#include <cstdlib>
+#include <string>
 #include <cmath>
 #include <numbers>
 

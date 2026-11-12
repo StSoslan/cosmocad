@@ -1,6 +1,10 @@
 // Библиотека стандартных изделий: крепёж (требование БИБ-1).
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <memory>
+#include <string>
+#include <vector>
 #include <cmath>
 #include <cstdlib>
 #include <filesystem>

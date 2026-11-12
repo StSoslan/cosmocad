@@ -1,5 +1,12 @@
 // Тесты окна: действия мышью и клавиатурой на настоящих виджетах (без экрана — платформа offscreen).
 // Закрывают пробел из плана тестирования: «действия мышью в окне не проверяются автоматически».
+#include <algorithm>
+#include <cmath>
+#include <cstddef>
+#include <memory>
+#include <numbers>
+#include <string>
+#include <vector>
 #include <cstdlib>
 #include <filesystem>
 #include <QComboBox>

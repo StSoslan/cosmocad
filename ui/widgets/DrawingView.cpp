@@ -1,5 +1,8 @@
 #include "DrawingView.h"
 
+#include <cstddef>
+#include <utility>
+#include <vector>
 #include <optional>
 #include <map>
 #include <QKeyEvent>

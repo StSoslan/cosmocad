@@ -1,5 +1,9 @@
 #include "cosmocad/libraries/Fasteners.h"
 
+#include <cstdlib>
+#include <filesystem>
+#include <string>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <fstream>

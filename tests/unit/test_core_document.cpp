@@ -1,6 +1,13 @@
 // Тесты базовых типов и модели документа (требования ОБ-8, ПЛ-1, ПЛ-2, ПЛ-5, ПЛ-6, ПЛ-7).
 #include <gtest/gtest.h>
 #include <nlohmann/json.hpp>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 #include <random>
 #include <set>
 

@@ -1,5 +1,17 @@
 #include "cosmocad/modeling/ModelingService.h"
 
+#include <atomic>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <functional>
+#include <map>
+#include <memory>
+#include <optional>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <cstdio>

@@ -3,6 +3,13 @@
 #include "cosmocad/document/Transaction.h"
 #include "cosmocad/geometry/OcctKernel.h"
 
+#include <cstddef>
+#include <filesystem>
+#include <memory>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <fstream>
 #include <sstream>

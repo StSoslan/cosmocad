@@ -1,6 +1,8 @@
 // Трубы из полипропилена: напряжение, допустимое давление, срок службы, отрезок трубы.
 #include <gtest/gtest.h>
 
+#include <cstddef>
+#include <memory>
 #include <cmath>
 #include <filesystem>
 #include <map>

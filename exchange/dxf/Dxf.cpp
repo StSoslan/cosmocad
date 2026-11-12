@@ -1,3 +1,12 @@
+#include <cstddef>
+#include <cstdlib>
+#include <exception>
+#include <locale>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 #include <cctype>
 #include <cmath>
 #include <iomanip>

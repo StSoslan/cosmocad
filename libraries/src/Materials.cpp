@@ -1,5 +1,10 @@
 #include "cosmocad/libraries/Materials.h"
 
+#include <cstddef>
+#include <filesystem>
+#include <string>
+#include <utility>
+#include <vector>
 #include <algorithm>
 #include <cmath>
 #include <fstream>
