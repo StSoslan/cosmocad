@@ -11,6 +11,7 @@ jobs:
     runs-on: windows-2022
     env:
       VCPKG_DEFAULT_TRIPLET: x64-windows
+      PYTHONUTF8: "1"
       VCPKG_BINARY_SOURCES: "clear;files,${{ github.workspace }}\\vcpkg-cache,readwrite"
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +59,7 @@ jobs:
         run: cmake --build --preset release
 
       - name: Тесты
-        run: ctest --preset release
+        run: ctest --preset release --output-on-failure
         env:
           QT_QPA_PLATFORM: offscreen
 

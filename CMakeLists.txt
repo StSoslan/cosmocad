@@ -16,6 +16,13 @@ option(COSMOCAD_WARNINGS_AS_ERRORS "Считать предупреждения 
 
 find_package(nlohmann_json 3.11 REQUIRED)
 
+# Для программ под Windows: кодировка UTF-8 для имён файлов и параметров запуска (см. utf8.manifest).
+function(cosmocad_executable target)
+  if(MSVC)
+    target_sources(${target} PRIVATE ${CMAKE_SOURCE_DIR}/packaging/windows/utf8.manifest)
+  endif()
+endfunction()
+
 add_library(cosmocad_options INTERFACE)
 if(MSVC)
   target_compile_options(cosmocad_options INTERFACE /W4 /permissive- /utf-8)

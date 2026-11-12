@@ -1,5 +1,9 @@
 // Консольная утилита CosmoCad: работа с проектами без окон.
 // Нужна для пакетной проверки оформления и автоматических тестов.
+#if defined(_WIN32)
+#define NOMINMAX
+#include <windows.h>
+#endif
 #include <algorithm>
 #include <optional>
 #include <filesystem>
@@ -128,6 +132,10 @@ core::Result<int> printModels(app::AppContext& context) {
 }  // namespace
 
 int main(int argc, char** argv) {
+#if defined(_WIN32)
+    // Русский текст в окне командной строки Windows.
+    SetConsoleOutputCP(CP_UTF8);
+#endif
     std::vector<std::string> args(argv + 1, argv + argc);
     if (args.empty()) return usage();
 

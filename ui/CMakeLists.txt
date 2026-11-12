@@ -13,6 +13,7 @@ target_include_directories(cosmocad_ui PUBLIC widgets workspaces commands)
 target_link_libraries(cosmocad_ui PUBLIC cosmocad_app cosmocad_exchange cosmocad_graphics Qt6::Widgets Qt6::PrintSupport PRIVATE cosmocad_options)
 
 add_executable(cosmocad ../apps/cosmocad/main.cpp)
+cosmocad_executable(cosmocad)
 target_link_libraries(cosmocad PRIVATE cosmocad_ui cosmocad_options)
 if(WIN32)
   set_target_properties(cosmocad PROPERTIES WIN32_EXECUTABLE ON)

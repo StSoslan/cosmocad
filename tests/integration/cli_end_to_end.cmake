@@ -3,7 +3,7 @@ file(REMOVE_RECURSE "${WORK}")
 file(MAKE_DIRECTORY "${WORK}")
 
 function(run expected_code)
-  execute_process(COMMAND ${ARGN} RESULT_VARIABLE code OUTPUT_VARIABLE out ERROR_VARIABLE err)
+  execute_process(COMMAND ${ARGN} RESULT_VARIABLE code OUTPUT_VARIABLE out ERROR_VARIABLE err ENCODING UTF8)
   if(NOT code EQUAL expected_code)
     message(FATAL_ERROR "Команда ${ARGN} вернула ${code}, ожидалось ${expected_code}\n${out}\n${err}")
   endif()

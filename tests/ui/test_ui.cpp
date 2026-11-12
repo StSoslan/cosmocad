@@ -27,7 +27,11 @@ using geometry::Point2;
 static const bool kUserDirectoryIsSet = [] {
     const auto directory = std::filesystem::temp_directory_path() / "cosmocad_test_user_ui";
     std::filesystem::remove_all(directory);
+#if defined(_WIN32)
+    _putenv_s("COSMOCAD_USER_DIR", directory.string().c_str());
+#else
     setenv("COSMOCAD_USER_DIR", directory.string().c_str(), 1);
+#endif
     return true;
 }();
 

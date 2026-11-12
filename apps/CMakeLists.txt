@@ -7,5 +7,6 @@ target_link_libraries(cosmocad_app PUBLIC cosmocad_storage cosmocad_standards co
   PRIVATE cosmocad_geometry_occt cosmocad_options)
 
 add_executable(cosmocad-cli cosmocad-cli/main.cpp)
+cosmocad_executable(cosmocad-cli)
 target_link_libraries(cosmocad-cli PRIVATE cosmocad_app cosmocad_exchange cosmocad_options)
 install(TARGETS cosmocad-cli RUNTIME DESTINATION bin)

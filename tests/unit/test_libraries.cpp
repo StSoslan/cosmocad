@@ -19,7 +19,11 @@ namespace {
 const fs::path kUserDirectory = [] {
     const fs::path directory = fs::temp_directory_path() / "cosmocad_test_user";
     fs::remove_all(directory);
+#if defined(_WIN32)
+    _putenv_s("COSMOCAD_USER_DIR", directory.string().c_str());
+#else
     setenv("COSMOCAD_USER_DIR", directory.string().c_str(), 1);
+#endif
     return directory;
 }();
 

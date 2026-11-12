@@ -15,6 +15,7 @@ add_executable(cosmocad_tests
   unit/test_sketcher.cpp
   unit/test_piping.cpp
   integration/test_interfaces_compile.cpp)
+cosmocad_executable(cosmocad_tests)
 target_compile_definitions(cosmocad_tests PRIVATE COSMOCAD_TEST_RESOURCES="${CMAKE_SOURCE_DIR}/resources")
 # Тесты дополнений загружают пример дополнения из папки сборки.
 target_compile_definitions(cosmocad_tests PRIVATE COSMOCAD_TEST_PLUGINS="${CMAKE_BINARY_DIR}/plugins")
@@ -50,6 +51,7 @@ if(COSMOCAD_BUILD_UI)
   find_package(Qt6 REQUIRED COMPONENTS Test)
   set(CMAKE_AUTOMOC ON)
   add_executable(cosmocad_ui_tests ui/test_ui.cpp)
+  cosmocad_executable(cosmocad_ui_tests)
   target_compile_definitions(cosmocad_ui_tests PRIVATE COSMOCAD_TEST_RESOURCES="${CMAKE_SOURCE_DIR}/resources")
   target_compile_definitions(cosmocad_ui_tests PRIVATE COSMOCAD_TEST_PLUGINS="${CMAKE_BINARY_DIR}/plugins")
   add_dependencies(cosmocad_ui_tests cosmocad_plugin_mass_report)
@@ -67,5 +69,6 @@ endif()
 
 # Замер производительности (КАЧ-6). Запускается вручную, в ctest не входит.
 add_executable(cosmocad_bench perf/bench.cpp)
+cosmocad_executable(cosmocad_bench)
 target_compile_definitions(cosmocad_bench PRIVATE COSMOCAD_TEST_RESOURCES="${CMAKE_SOURCE_DIR}/resources")
 target_link_libraries(cosmocad_bench PRIVATE cosmocad_app cosmocad_exchange cosmocad_graphics cosmocad_options)
